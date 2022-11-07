@@ -1,0 +1,32 @@
+<h1>Db Operations Selector</h1>
+
+<p>This is a simple example of an Angular component.</p>
+
+<p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
+
+<button class="btn btn-primary" (click)="getSelectTest()">Select</button><br /><br />
+
+<button class="btn btn-primary" (click)="incrementCounter()">Delete</button><br /><br />
+
+<button class="btn btn-primary" (click)="incrementCounter()">Update</button><br /><br />
+
+<button class="btn btn-primary" (click)="incrementCounter()">Insert</button><br /><br />
+
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="spices">
+  <thead>
+    <tr>
+      <th>Spice ID</th>
+      <th>Spice Name</th>
+      <th>Spice Description</th>      
+    </tr>
+  </thead>
+ <!-- <tbody>
+    <tr *ngFor="let forecast of forecasts">
+      <td>{{ spices.id }}</td>
+      <td>{{ spices.name }}</td>
+      <td>{{ spices.description }}</td>      
+    </tr>
+  </tbody>-->
+</table>
+
