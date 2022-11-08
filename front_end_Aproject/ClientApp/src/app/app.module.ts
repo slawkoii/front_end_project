@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { DBOperationsComponent } from './db_operations/db_operations.component';
+import { CommonModule } from '@angular/common';  
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { DBOperationsComponent } from './db_operations/db_operations.component';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    DBOperationsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
