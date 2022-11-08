@@ -4,7 +4,7 @@
 
 <p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
 
-<button class="btn btn-primary" (click)="getSelectTest()">Select</button><br /><br />
+<button class="btn btn-primary" (click)="chooseSelect()">Select</button><br /><br />
 
 <button class="btn btn-primary" (click)="incrementCounter()">Delete</button><br /><br />
 
@@ -12,6 +12,9 @@
 
 <button class="btn btn-primary" (click)="incrementCounter()">Insert</button><br /><br />
 
+<button class="btn btn-primary" (click)="getCheck()">GetCheck</button><br /><br />
+
+<p aria-live="polite">Number getCheck: <strong>{{ Number }}</strong></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="spices">
   <thead>

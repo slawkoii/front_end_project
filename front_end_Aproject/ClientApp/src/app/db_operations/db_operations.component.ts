@@ -12,7 +12,7 @@ export class DBOperationsComponent
 {
   public spices: SpiceModel[] = []
   configUrl: string = 'http://192.168.0.178:8050/spice/select';
-
+  public Number: any = 0;
   
 
   constructor(private http: HttpClient)
@@ -26,19 +26,12 @@ export class DBOperationsComponent
     this.http.post<SpiceModel[]>('http://192.168.0.178:8050/spice/select', request).subscribe(result => {
       this.spices = result;
     }, error => console.error(error));
-  }
+  }  
 
-  public getSelectTest()
+  public getCheck()
   {
-    return this.http.get(this.configUrl).subscribe(res => {
-      console.log(res);
-    },
-      err => {
-        throw err;
-      });
+    this.http.get('http://localhost:8050/spice/check').subscribe(result=>{this.Number=result;})
   }
-
- 
 
   public currentCount = 0;
 
