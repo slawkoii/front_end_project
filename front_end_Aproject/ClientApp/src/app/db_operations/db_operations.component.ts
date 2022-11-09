@@ -2,10 +2,17 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'db_operations',
   templateUrl: './db_operations.component.html'
+})
+
+@Injectable({
+  providedIn: 'root'
 })
 
 export class DBOperationsComponent
@@ -23,7 +30,7 @@ export class DBOperationsComponent
   public chooseSelect()
   {
     var request = <SpiceSelectRequest>{ name: 'ginger' }
-    this.http.post<SpiceModel[]>('http://192.168.0.178:8050/spice/select', request).subscribe(result => {
+    this.http.post<SpiceModel[]>('http://localhost:8050/spice/select', request).subscribe(result => {
       this.spices = result;
     }, error => console.error(error));
   }  
